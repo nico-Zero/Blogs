@@ -22,22 +22,9 @@ from functools import wraps
 from forms import CreatePostForm, RegisterUserForm, LoginForm, CommentForm
 
 
-"""
-Make sure the required packages are installed:
-Open the Terminal in PyCharm (bottom left).
-
-On Windows type:
-python -m pip install -r requirements.txt
-
-On MacOS type:
-pip3 install -r requirements.txt
-
-This will install the packages from the requirements.txt for this project.
-"""
-
 app = Flask(__name__)
 app.config["SECRET_KEY"] = generate_password_hash(
-    "##Nico_Zero@69_(python)_69", salt_length=10
+    "asldkhfakjhdaweklrthqenoeqh", salt_length=10
 )
 
 ckeditor = CKEditor(app)
