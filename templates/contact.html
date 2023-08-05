@@ -1,10 +1,7 @@
 {% include "header.html" %}
 
 <!-- Page Header-->
-<header
-  class="masthead"
-  style="background-image: url('../static/assets/img/contact-bg.jpg')"
->
+<header class="masthead" style="background-image: url('../static/assets/img/contact-bg.jpg')">
   <div class="container position-relative px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
       <div class="col-md-10 col-lg-8 col-xl-7">
@@ -32,62 +29,28 @@
         <div class="my-5">
           <!-- * * * * * * * * * * * * * * *-->
           <!-- * * Simplified SB Contact Form for the Tutorial* *-->
-          <form
-            id="contactForm"
-            name="sentMessage"
-            action="{{ url_for('contact') }}"
-            method="post"
-          >
+          <form id="contactForm" name="sentMessage" action="{{ url_for('contact') }}" method="post">
             <div class="form-floating">
-              <input
-                class="form-control"
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Enter your name..."
-                required
-              />
+              <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required />
               <label for="name">Name</label>
             </div>
             <div class="form-floating">
-              <input
-                class="form-control"
-                id="email"
-                name="email"
-                type="email"
-                placeholder="Enter your email..."
-                required
-              />
+              <input class="form-control" id="email" name="email" type="email" placeholder="Enter your email..."
+                required />
               <label for="email">Email address</label>
             </div>
             <div class="form-floating">
-              <input
-                class="form-control"
-                id="phone"
-                name="phone"
-                type="tel"
-                placeholder="Enter your phone number..."
-                required
-              />
+              <input class="form-control" id="phone" name="phone" type="tel" placeholder="Enter your phone number..."
+                required />
               <label for="phone">Phone Number</label>
             </div>
             <div class="form-floating">
-              <textarea
-                class="form-control"
-                id="message"
-                name="message"
-                placeholder="Enter your message here..."
-                required
-                style="height: 12rem"
-              ></textarea>
+              <textarea class="form-control" id="message" name="message" placeholder="Enter your message here..."
+                required style="height: 12rem"></textarea>
               <label for="message">Message</label>
             </div>
             <br />
-            <button
-              class="btn btn-danger text-uppercase"
-              id="submitButton"
-              type="submit"
-            >
+            <button class="btn btn-danger text-uppercase" id="submitButton" type="submit">
               NOT USED in Day 69
             </button>
           </form>
