@@ -17,14 +17,14 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy.orm import relationship
 from sqlalchemy.exc import IntegrityError, NoResultFound
 from functools import wraps
+from os import environ
 
-# Import your forms from the forms.py
 from forms import CreatePostForm, RegisterUserForm, LoginForm, CommentForm
 
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = generate_password_hash(
-    "asldkhfakjhdaweklrthqenoeqh", salt_length=10
+    str(environ.get("SECRET_KEY")), salt_length=10
 )
 
 ckeditor = CKEditor(app)
@@ -35,7 +35,7 @@ login_manager.init_app(app)
 
 
 # CONNECT TO DB
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///blogs.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = environ.get("SQL_DB_URL")
 db = SQLAlchemy()
 db.init_app(app)
 
